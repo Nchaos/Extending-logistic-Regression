@@ -13684,7 +13684,11 @@ Let's start by using the template from: <a href="https://github.com/eclarson/Mac
 <div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.special</span> <span class="k">import</span> <span class="n">expit</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from https://github.com/eclarson/MachineLearningNotebooks/blob/master/05.%20Logistic%20Regression.ipynb</span>
+<span class="c1"># and from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+<span class="c1"># and from https://github.com/carterkoehler/extending-logistic-regression/blob/master/notebooks/logistic-regression-dengue-fever.ipynb</span>
+
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="k">import</span> <span class="n">expit</span>
 
 <span class="k">class</span> <span class="nc">BinaryLogisticRegressionBase</span><span class="p">:</span>
     
@@ -13751,7 +13755,11 @@ Let's start by using the template from: <a href="https://github.com/eclarson/Mac
 <div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">BinaryLogisticRegression</span><span class="p">(</span><span class="n">BinaryLogisticRegressionBase</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from https://github.com/eclarson/MachineLearningNotebooks/blob/master/05.%20Logistic%20Regression.ipynb</span>
+<span class="c1"># and from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+<span class="c1"># and from https://github.com/carterkoehler/extending-logistic-regression/blob/master/notebooks/logistic-regression-dengue-fever.ipynb</span>
+
+<span class="k">class</span> <span class="nc">BinaryLogisticRegression</span><span class="p">(</span><span class="n">BinaryLogisticRegressionBase</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                 <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
@@ -13823,7 +13831,11 @@ Let's start by using the template from: <a href="https://github.com/eclarson/Mac
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MultiClassLogisticRegression</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from https://github.com/eclarson/MachineLearningNotebooks/blob/master/05.%20Logistic%20Regression.ipynb</span>
+<span class="c1"># and from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+<span class="c1"># and from https://github.com/carterkoehler/extending-logistic-regression/blob/master/notebooks/logistic-regression-dengue-fever.ipynb</span>
+
+<span class="k">class</span> <span class="nc">MultiClassLogisticRegression</span><span class="p">:</span>
     
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                 <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
@@ -13891,7 +13903,9 @@ Let's start by using the template from: <a href="https://github.com/eclarson/Mac
 <div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr_clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/egabrielsen/MachineLearning/blob/master/Lab04/Lab04-Final.ipynb</span>
+
+<span class="n">lr_clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
 
 <span class="c1"># We will use the cv_object we created earilier and iterate through the different training and testing sets.</span>
 
@@ -13964,7 +13978,9 @@ Let's now test our Binary classifiers...</p>
 <div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/egabrielsen/MachineLearning/blob/master/Lab04/Lab04-Final.ipynb</span>
+
+<span class="o">%%</span><span class="k">time</span>
 
 # Stochastic Test
 for train_index, test_index in cv_object.split(X, y):
@@ -14120,7 +14136,9 @@ Wall time: 2.04 s
 <div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+
+<span class="o">%%</span><span class="k">time</span>
 import copy
 #We tested C&#39;s above 1 and they all offer same results. 
 c_list = [0.001,0.01,0.1,1,10] #0.001,0.01,0.1,1,10]
@@ -14310,7 +14328,9 @@ Wall time: 2h 24min 25s
 <div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Newton</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+
+<span class="c1">## Newton</span>
 <span class="n">df_perf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">NewtonMatrix</span><span class="p">)</span>
 <span class="n">df_perf</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;L1&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;L2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;L1 &amp; L2&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1">#print(df_performance)</span>
@@ -14418,7 +14438,9 @@ Wall time: 2h 24min 25s
 <div class="prompt input_prompt">In&nbsp;[160]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Best Method: Stoch (L1 &amp; L2) C = 0.1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+
+<span class="c1"># Best Method: Stoch (L1 &amp; L2) C = 0.1</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="c1"># Let&#39;s start by finding the time to train the model and classify as well as getting an accuracy score</span>
@@ -14525,7 +14547,9 @@ Multi-class stochastic has an accuracy of:  0.2520100427414293
 <div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now lets visualize the data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modified from https://github.com/tylergiallanza/CSE5324-Labs/blob/master/lab-three/Momin%20Notebook.ipynb</span>
+
+<span class="c1"># Now lets visualize the data</span>
 
 <span class="n">time_skl</span> <span class="o">=</span> <span class="p">(</span><span class="n">skl_trainTime</span><span class="p">,</span> <span class="n">skl_class</span><span class="p">)</span>
 <span class="n">time_mlr</span> <span class="o">=</span> <span class="p">(</span><span class="n">mlr_train</span><span class="p">,</span> <span class="n">mlr_class</span><span class="p">)</span>
